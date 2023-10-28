@@ -2,7 +2,7 @@
 
 
 <img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="200">
-<img src="https://en.vetores.org/d/mongodb.svg" width="300" alt="">
+<img src="https://en.vetores.org/d/mongodb.svg" width="200" alt="">
 
 <h2>
 CRUD Operations Using Laravel 9 & MongoDB
