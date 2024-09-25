@@ -1,12 +1,4 @@
-
-
-
-<img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="200">
-<img src="https://en.vetores.org/d/mongodb.svg" width="300" alt="">
-
-<h2>
-Laravel 11 & MongoDB Quick Start
-</h2>
+# Laravel 11 & MongoDB Quick Start
 
 - **MongoDB Integration**: Full integration of MongoDB as the Database For Your Laravel Project.
 - **Caching with MongoDB**: Store and Manage Cache Data in MongoDB.
