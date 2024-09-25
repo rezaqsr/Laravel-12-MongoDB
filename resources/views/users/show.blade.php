@@ -1,14 +1,14 @@
-@extends('books.layout')
+@extends('users.layout')
 
 
 @section('content')
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2> {{ $book->name }} Book</h2>
+                <h2> {{ $user->name }} User</h2>
             </div>
             <div class="pull-right">
-                <a class="btn waves-effect waves-light btn-primary" href="{{ route('books.index') }}"> Back</a>
+                <a class="btn waves-effect waves-light btn-primary" href="{{ route('users.index') }}"> Back</a>
             </div>
         </div>
     </div>
@@ -18,14 +18,14 @@
         <thead>
         <tr>
             <th>Name</th>
-            <th>Details</th>
+            <th>Email</th>
         </tr>
         </thead>
 
         <tbody>
         <tr>
-            <td>          {{ $book->name }}</td>
-            <td>    {{ $book->detail }}</td>
+            <td>    {{ $user->name }}</td>
+            <td>    {{ $user->email }}</td>
 
         </tr>
         </tbody>

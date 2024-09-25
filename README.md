@@ -2,41 +2,59 @@
 
 
 <img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="200">
-<img src="https://en.vetores.org/d/mongodb.svg" width="200" alt="">
+<img src="https://en.vetores.org/d/mongodb.svg" width="300" alt="">
 
 <h2>
-CRUD Operations Using Laravel 9 & MongoDB
+Laravel 11 & MongoDB Quick Start
 </h2>
-<p>
-just a Simple Template For CRUD Operations Using Laravel 9 , Mongodb & materialize css.
-</p>
-<br>
-<h2>
-instruction
-</h2>
-<h4>Step 1 : Install MongoDB</h4>
-Use this <a href="https://www.mongodb.com/docs/manual/tutorial/">tutorial</a> for Installation
-<br>
-<small>note : you should add mongodb extension to php.ini </small>
-<a href="https://www.php.net/manual/en/mongodb.installation.windows.php">tutorial</a>
 
-<h4>Step 2 : MongoDB Database Configuration</h4>
+- **MongoDB Integration**: Full integration of MongoDB as the Database For Your Laravel Project.
+- **Caching with MongoDB**: Store and Manage Cache Data in MongoDB.
+- **Queue Management**: Use MongoDB For Laravel's Queue System.
+- **Environment Configurations**: Easy-to-Configure `.env` File for MongoDB Settings.
+## Prerequisites
 
-open .env file and fill all details like this
-<pre>
-MONGO_DB_HOST=127.0.0.1
-MONGO_DB_PORT=27017
-MONGO_DB_DATABASE=bookDB // or any name you want
-MONGO_DB_USERNAME= //DB Username (Leave it blank if you have not set it)
-MONGO_DB_PASSWORD= //DB Password (Leave it blank if you have not set it)
-</pre>
+Before you start, ensure you have the following:
 
-<h4>Step 3 : Install Composer Packages</h4>
-<pre>
+- PHP 8.2+
+- Composer
+- [MongoDB Server](https://www.mongodb.com/docs/manual/tutorial/)
+- [MongoDB PHP Extension](https://www.php.net/manual/en/mongodb.installation.php)
+
+
+## Getting Started
+
+### Step 1: Clone the Repository
+
+```bash
+git clone https://github.com/rezaqsr/Laravel-mongoDB.git
+cd laravel-mongodb-starter
+```
+### Step 2: composer install
+
+```bash
 composer install
-</pre>
+```
+### Step 3: Configure Environment Variables
 
-<h4>Step 4 : Run Server </h4>
-<pre>
+Create `.env` & Copy the `.env.example` file to `.env`:
+
+```bash
+cp .env.example .env
+```
+### Step 4: Generate App Key
+```bash
+php artisan key:generate
+```
+### Step 5: Run Server
+```bash
 php artisan serve
-</pre>
+```
+## Resources
+ - [Laravel Documentation](https://laravel.com/docs)
+ - [MongoDB Documentation](https://www.mongodb.com/docs/)
+## License
+This project is open-sourced under the MIT license.
+
+This `README.md` provides clear instructions for setting up a Laravel project integrated with MongoDB, covering database connection, caching, and queue configurations for a quick start.
+

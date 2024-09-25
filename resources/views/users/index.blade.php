@@ -1,4 +1,4 @@
-@extends('books.layout')
+@extends('users.layout')
 
 
 @section('content')
@@ -6,10 +6,10 @@
         <div class="row">
             <div class="col-lg-12 margin-tb">
                 <div class="pull-left">
-                    <h2>Books</h2>
+                    <h2>Users</h2>
                 </div>
                 <div class="pull-right">
-                    <a class="btn waves-effect waves-light btn-success" href="{{ route('books.create') }}"> Create New Book</a>
+                    <a class="btn waves-effect waves-light btn-success" href="{{ route('users.create') }}"> Create New User</a>
                 </div>
             </div>
         </div>
@@ -18,18 +18,19 @@
             <tr>
                 <th>No</th>
                 <th>Name</th>
-                <th>Details</th>
+                <th>Email</th>
                 <th width="280px">Action</th>
             </tr>
-            @foreach ($books as $book)
+            @if(count($users) > 0)
+            @foreach ($users as $user)
                 <tr>
                     <td>{{ ++$i }}</td>
-                    <td>{{ $book->name }}</td>
-                    <td>{{ Illuminate\Support\Str::limit($book->detail, 20) }}</td>
+                    <td>{{ $user->name }}</td>
+                    <td>{{ $user->email }}</td>
                     <td>
-                        <form action="{{ route('books.destroy',$book->id) }}" method="POST">
-                            <a class="btn waves-effect waves-light btn-info" href="{{ route('books.show',$book->id) }}">Show</a>
-                            <a class="btn waves-effect waves-light btn-primary" href="{{ route('books.edit',$book->id) }}">Edit</a>
+                        <form action="{{ route('users.destroy',$user->id) }}" method="POST">
+                            <a class="btn waves-effect waves-light btn-info" href="{{ route('users.show',$user->id) }}">Show</a>
+                            <a class="btn waves-effect waves-light btn-primary" href="{{ route('users.edit',$user->id) }}">Edit</a>
                             @csrf
                             @method('DELETE')
                             <button type="submit" class="btn waves-effect waves-light btn-danger">Delete</button>
@@ -37,6 +38,11 @@
                     </td>
                 </tr>
             @endforeach
+            @else
+                <tr>
+                    <td>List Is Empty</td>
+                </tr>
+            @endif
         </table>
     </div>
 
