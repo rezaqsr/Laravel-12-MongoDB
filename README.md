@@ -20,7 +20,7 @@ Before you start, ensure you have the following:
 
 ```bash
 git clone https://github.com/rezaqsr/Laravel-mongoDB.git
-cd laravel-mongodb-starter
+cd Laravel-mongoDB
 ```
 ### Step 2: composer install
 
