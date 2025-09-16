@@ -34,7 +34,7 @@ return [
         'mongodb' => [
             'driver' => 'mongodb',
             'dsn' => env('DB_URI'),
-            'database' => 'laravel',
+            'database' => env('DB_DATABASE', 'laravel'),
 //            'prefix' => '',
         ],
 
