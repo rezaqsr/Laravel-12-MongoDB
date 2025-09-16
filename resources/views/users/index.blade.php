@@ -14,26 +14,26 @@
             </div>
         </div>
 
-        <table class="table table-bordered">
+        <table class="table table-bordered responsive-table centered highlight">
             <tr>
-                <th>No</th>
-                <th>Name</th>
-                <th>Email</th>
-                <th width="280px">Action</th>
+                <th class="center-align">No</th>
+                <th class="center-align">Name</th>
+                <th class="center-align">Email</th>
+                <th class="center-align">Action</th>
             </tr>
             @if(count($users) > 0)
             @foreach ($users as $user)
                 <tr>
-                    <td>{{ ++$i }}</td>
+                    <td>{{ $loop->iteration }}</td>
                     <td>{{ $user->name }}</td>
                     <td>{{ $user->email }}</td>
                     <td>
-                        <form action="{{ route('users.destroy',$user->id) }}" method="POST">
-                            <a class="btn waves-effect waves-light btn-info" href="{{ route('users.show',$user->id) }}">Show</a>
-                            <a class="btn waves-effect waves-light btn-primary" href="{{ route('users.edit',$user->id) }}">Edit</a>
+                        <form class="my-2" action="{{ route('users.destroy',$user->id) }}" method="POST">
+                            <a class="btn waves-effect waves-light" href="{{ route('users.show',$user->id) }}">Show</a>
+                            <a class="btn waves-effect waves-light green" href="{{ route('users.edit',$user->id) }}">Edit</a>
                             @csrf
                             @method('DELETE')
-                            <button type="submit" class="btn waves-effect waves-light btn-danger">Delete</button>
+                            <button type="submit" class="btn waves-effect waves-light red">Delete</button>
                         </form>
                     </td>
                 </tr>

@@ -16,8 +16,7 @@ class UserController extends Controller
     public function index(): \Illuminate\Foundation\Application|\Illuminate\Contracts\View\View|\Illuminate\Contracts\View\Factory
     {
         $users = User::all();
-        return view('users.index',compact('users'))
-            ->with('i', (request()->input('page', 1) - 1) * 5);
+        return view('users.index',compact('users'));
     }
 
 
@@ -41,8 +40,8 @@ class UserController extends Controller
     public function store(Request $request): \Illuminate\Http\RedirectResponse
     {
         request()->validate([
-            'name' => 'required',
-            'email' => 'required|email',
+            'name' => 'required|string',
+            'email' => 'required|email|unique:users,email',
             'password' => 'required',
         ]);
         User::create($request->all());
@@ -88,7 +87,7 @@ class UserController extends Controller
     {
         request()->validate([
             'name' => 'required',
-            'email' => 'required|email',
+            'email' => 'required|email|unique:users,email'.$user->_id,
         ]);
 
 
