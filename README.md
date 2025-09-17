@@ -1,4 +1,15 @@
-# Laravel 12 & MongoDB
+<div align="center">
+<h1>Laravel 12 & MongoDB</h1>
+</div>
+
+<p align="center">
+<a href="#"><img src="https://img.shields.io/badge/Laravel-12.x-f61500" alt="Laravel"></a>
+<a href="#"><img src="https://img.shields.io/badge/MongoDB-42B883" alt="MongoDB"></a>
+<a href="#"><img src="https://img.shields.io/badge/Livewire-3.x-C25C8B" alt="LiveWire"></a>
+<a href="#"><img src="https://img.shields.io/badge/MaterializeCSS-1.x-EE6E73" alt="Tailwind"></a>
+</p>
+
+---
 
 - **MongoDB Integration**: Full integration of MongoDB as the Database For Your Laravel Project.
 - **Caching with MongoDB**: Store and Manage Cache Data in MongoDB.
@@ -45,6 +56,8 @@ php artisan serve
 ## Resources
  - [Laravel Documentation](https://laravel.com/docs)
  - [MongoDB Documentation](https://www.mongodb.com/docs/)
+ - [Livewire Documentation](https://livewire.laravel.com/docs/quickstart)
+ - [Materialize CSS Documentation](https://materializecss.com/)
 ## License
 This project is open-sourced under the MIT license.
 

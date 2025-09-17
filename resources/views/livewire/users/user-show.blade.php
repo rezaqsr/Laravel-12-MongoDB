@@ -1,18 +1,14 @@
-@extends('users.layout')
-
-
-@section('content')
+<div>
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2> {{ $user->name }} User</h2>
+                <h2>{{ $this->user->name }} User</h2>
             </div>
             <div class="pull-right">
-                <a class="btn waves-effect waves-light btn-primary" href="{{ route('users.index') }}"> Back</a>
+                <a class="btn waves-effect waves-light btn-primary" wire:navigate href="{{ route('users.index') }}"> Back</a>
             </div>
         </div>
     </div>
-
 
     <table class="highlight">
         <thead>
@@ -21,14 +17,11 @@
             <th>Email</th>
         </tr>
         </thead>
-
         <tbody>
         <tr>
-            <td>    {{ $user->name }}</td>
-            <td>    {{ $user->email }}</td>
-
+            <td>{{ $this->user->name }}</td>
+            <td>{{ $this->user->email }}</td>
         </tr>
         </tbody>
     </table>
-
-@endsection
+</div>
