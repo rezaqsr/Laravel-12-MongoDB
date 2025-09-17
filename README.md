@@ -1,7 +1,6 @@
 <div align="center">
 <h1>Laravel 12 & MongoDB</h1>
 </div>
-
 <p align="center">
 <a href="#"><img src="https://img.shields.io/badge/Laravel-12.x-f61500" alt="Laravel"></a>
 <a href="#"><img src="https://img.shields.io/badge/MongoDB-42B883" alt="MongoDB"></a>
